@@ -1,3 +1,5 @@
+# Programmed by Jake Intravaia, Copyright 2020, All rights reserved
+
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.neural_network import MLPClassifier
@@ -50,13 +52,3 @@ predictions = mlp.predict(X_test) # Our prediction output
 
 print(confusion_matrix(y_test.astype(float), predictions)) # Printing our confusion matrix
 print(classification_report(y_test.astype(float), predictions)) # Printing our classification report
-
-#fig, axes = plt.subplots(4,4)
-
-#vmin, vmax = mlp.coefs_[0].min(), mlp.coefs_[0].max()
-#for coef, ax in zip(mlp.coefs_[0].T, axes.ravel()):
-#    ax.matshow(coef.reshape(18,18), cmap=plt.cm.gray, vmin=.5 * vmin, vmax=.5 * vmax)
-#    ax.set_xticks(())
-#    ax.set_yticks(())
-
-#plt.show()
